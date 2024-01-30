@@ -18,6 +18,7 @@ import java.util.Map;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class CheckingAccountSteps {
     WebDriver driver = Driver.getDriver();
@@ -101,15 +102,7 @@ public class CheckingAccountSteps {
     public void the_user_click_submit() {
         WebElement submit = driver.findElement(By.xpath("//*[@id='right-panel']/div[2]/div/div/div/div/form/div[2]/button[1]"));
         submit.click();
+      // fail();
     }
-
-
-
-
-
-
-
-
-
 
 }

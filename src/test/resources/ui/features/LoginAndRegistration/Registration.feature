@@ -13,7 +13,7 @@ Feature: Digital Bank Registration Page
     Then User should be displayed with the message "Success Registration Successful. Please Login."
     Then the following user info should be saved in the db
       |title|firstName|lastName|gender |dob       |ssn         |email        | password |address   |locality|region|postalCode|country|homePhone |mobilePhone|workPhone |accountNonExpired|accountNonLocked|credentialsNonExpired|enabled|
-      |Mr.  |Jack     |Test    |M      |12/12/1990|123-44-2235 |jack@test.co |Tester123 |12 Main St|City    |CA    |99921     |US     |2136591208|1126593008|116593008  |true             |true            |true                |true   |
+      |Mr.  |Jack     |Test    |M      |12/12/1990|123-44-2235 |jack@test.co |Tester123 |12 Main St|City    |CA    |99921     |US     |2136591208|1126593008|116593008  |true             |true            |null                 |true   |
 
 
   @NegativeRegistrationCases

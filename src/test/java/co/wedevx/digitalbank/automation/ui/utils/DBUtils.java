@@ -14,7 +14,7 @@ public class DBUtils {
     private static ResultSet resultSet = null;
 
     // method to establish connection with the db
-    public static void establishConnection() {
+    public static void establishConnection() throws SQLException {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -24,7 +24,9 @@ public class DBUtils {
                     getPropertiesValue("digitalbank.db.password"));
 
         } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Unable to establish Connection");
             e.printStackTrace();
+            throw new SQLException("Unable to establish DB Connection");
         }
     }
 
